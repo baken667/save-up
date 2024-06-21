@@ -47,7 +47,8 @@ watch(
 )
 </script>
 <template>
-  <div class="flex items-center justify-center grow">
+  <div class="flex flex-col gap-4 items-center justify-center grow">
+    <h2 class="text-xl font-bold">{{ _.sumBy(tableStore.table, (item) => item.amount) }}</h2>
     <table class="text-lg table-auto border-collapse">
       <tr
         v-for="(row, i) in matrixTable"
