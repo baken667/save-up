@@ -9,7 +9,7 @@ const dialog = ref<InstanceType<typeof AddDenominationDialog>>()
 const showDialog = () => dialog.value?.show()
 </script>
 <template>
-  <NavItem title="Номиналы" :can-toggle="true">
+  <NavItem title="Номиналы" :can-toggle="false">
     <div class="flex flex-row flex-wrap gap-2">
       <button
         class="bg-gray-200 p-1 aspect-square flex items-center justify-center rounded-full hover:bg-gray-300"

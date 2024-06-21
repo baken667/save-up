@@ -4,7 +4,7 @@ import AppNavigation from './AppNavigation.vue'
 </script>
 <template>
   <AppHeader />
-  <div class="w-full flex flex-row content-height items-stretch">
+  <div class="w-full flex flex-col lg:flex-row content-height items-stretch">
     <AppNavigation />
     <slot />
   </div>

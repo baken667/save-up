@@ -6,14 +6,13 @@ import autoTable from 'jspdf-autotable'
 import _ from 'lodash'
 
 const tableStore = useTable()
-const doc = new jsPDF('landscape', 'pt', 'A4')
 const matrixTable = ref<number[][]>([])
 
 watch(
   () => tableStore.table,
   (val) => {
     if (val.length === 0) return
-
+    const doc = new jsPDF('landscape', 'pt', 'A4')
     const amounts = val.map((item) => item.amount)
     const matrix = _.chunk(amounts, 10)
     matrixTable.value = matrix
